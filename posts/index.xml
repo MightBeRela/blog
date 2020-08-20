@@ -17,8 +17,13 @@
       <pubDate>Thu, 20 Aug 2020 14:04:45 +0900</pubDate>
       
       <guid>https://mightberela.github.io/blog/posts/github-pages-x-hugo-%E3%81%AE%E9%81%8B%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
-      <description>#Github Pages x Hugo の運用方法 Github PagesやHugoの要所要所の使い方は多く存在するのですが、 Gitのインストールから実際にHugoを使ってブログとして使うまで 書いているところは少ないので運用方法として書きました。
-Hugoが関わっている部分はこちらを参考にしました。 https://gohugo.io/getting-started/quick-start/ https://gohugo.io/hosting-and-deployment/hosting-on-github/ こちらを日本語訳したものを1記事にまとめたもとの考えてもらえば良いと思います。</description>
+      <description>#Github Pages x Hugo の運用方法 Github PagesやHugoの要所要所の使い方は多く存在するのですが、
+Gitのインストールから実際にHugoを使ってブログとして使うまで
+書いているところは少ないので運用方法として書きました。
+Hugoが関わっている部分はこちらを参考にしました。
+https://gohugo.io/getting-started/quick-start/
+https://gohugo.io/hosting-and-deployment/hosting-on-github/
+こちらを日本語訳したものを1記事にまとめたもとの考えてもらえば良いと思います。</description>
     </item>
     
   </channel>
