@@ -171,7 +171,7 @@ GitHubアカウントの作成  Githubの公式サイトにアクセス ユー�
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                1162 Words
+                                1496 Words
                                 
                             </div>
                         </div>
@@ -267,6 +267,30 @@ Gitのインストールから実際にHugoを使ってブログとして使う�
 <li><code>git push -u origin master</code>を実行</li>
 </ol>
 <h2 id="github-pagesの公開設定する">Github Pagesの公開設定する</h2>
+<ol>
+<li>リポジトリにアクセス(<a href="https://github.com/">https://github.com/</a>ユーザーID/リポジトリ名)</li>
+<li>Settingsを開く</li>
+<li>下にスクロールしてGithub Pagesの設定項目を見つける</li>
+<li>Sourceにmasterを選択</li>
+<li>セーブを押す</li>
+</ol>
+<h2 id="記事を作る">記事を作る</h2>
+<ol>
+<li><code>hugo new posts/Title.md</code>を実行<br>
+(ファイル名に日本語を指定すると文字化けするので英語で指定した後手動で日本語のファイル名を指定する必要がある。)</li>
+<li>マークダウンで書く (次回の記事はこれについて書くかも？)</li>
+</ol>
+<h2 id="githubにアップロードする二回目以降">Githubにアップロードする(二回目以降)</h2>
+<ol start="0">
+<li>publicの中身を削除 (これはどちらでも)</li>
+<li>コマンドプロンプトを開く</li>
+<li>解答した場所に作業ディレクトリを移す</li>
+<li><code>hugo -D</code>を実行</li>
+<li><code>cd public</code>を実行</li>
+<li><code>git add .</code>を実行</li>
+<li><code>git commit -m コメント</code>を実行</li>
+<li><code>git push -u origin master</code>を実行</li>
+</ol>
 </article>
                         </div>
                     </div>
