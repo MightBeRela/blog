@@ -171,7 +171,7 @@ GitHubアカウントの作成  Githubの公式サイトにアクセス ユー�
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                1031 Words
+                                1162 Words
                                 
                             </div>
                         </div>
@@ -246,13 +246,27 @@ Gitのインストールから実際にHugoを使ってブログとして使う�
 </ol>
 <h3 id="テーマが正常に動作しているかどうかを確かめる">テーマが正常に動作しているかどうかを確かめる</h3>
 <ol>
-<li><code>hugo start -d</code>を実行</li>
+<li><code>hugo start -D</code>を実行</li>
 <li>http://localhost:1313/にアクセス</li>
 </ol>
-<h3 id="github上で動作することを想定してconfigを変更する">github上で動作することを想定してconfigを変更する</h3>
+<h3 id="github上で動作することを想定してconfigを変更する">Github上で動作することを想定してconfigを変更する</h3>
 <ol>
-<li>config.tomlのbaseURLをhttps://ユーザーID.github.io/リポジトリ名/に変更する</li>
+<li>config.tomlのbaseURLを<code> https://ユーザーID.github.io/リポジトリ名/</code> に変更する</li>
 </ol>
+<h3 id="ビルド">ビルド</h3>
+<ol>
+<li><code>hugo -D</code>を実行</li>
+</ol>
+<h2 id="githubにアップロードする初回">Githubにアップロードする(初回)</h2>
+<ol>
+<li><code>cd public</code>を実行</li>
+<li><code>git init</code>を実行</li>
+<li><code>git add .</code>を実行</li>
+<li><code>git commit -m コメント</code>を実行</li>
+<li><code>git remote add origin https://github.com/ユーザーID/リポジトリ名.git</code>を実行</li>
+<li><code>git push -u origin master</code>を実行</li>
+</ol>
+<h2 id="github-pagesの公開設定する">Github Pagesの公開設定する</h2>
 </article>
                         </div>
                     </div>
