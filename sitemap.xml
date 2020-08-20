@@ -3,12 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mightberela.github.io/blog/about/</loc>
-    <lastmod>2020-08-20T01:45:03+09:00</lastmod>
+    <loc>https://mightberela.github.io/blog/</loc>
+    <lastmod>2020-08-20T13:52:26+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mightberela.github.io/blog/</loc>
+    <loc>https://mightberela.github.io/blog/posts/hello/</loc>
+    <lastmod>2020-08-20T13:52:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mightberela.github.io/blog/posts/</loc>
+    <lastmod>2020-08-20T13:52:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mightberela.github.io/blog/about/</loc>
+    <lastmod>2020-08-20T01:45:03+09:00</lastmod>
   </url>
   
   <url>
