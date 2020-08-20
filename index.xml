@@ -19,11 +19,11 @@
       <guid>https://mightberela.github.io/blog/posts/github-pages-x-hugo-%E3%81%AE%E9%81%8B%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>Github Pages x Hugo の運用方法 Github PagesやHugoの要所要所の使い方は多く存在するのですが、
 Gitのインストールから実際にHugoを使ってブログとして使うまで
-書いているところは少ないので運用方法として書きました。
-Hugoに関しては以下の記事を日本語訳したものを1記事にまとめたもとの考えてもらえば良いと思います。
+書いているところは少ないので運用方法として書くことにしました。
+Hugoに関しては以下の記事を日本語訳したものを1つの記事にまとめたもとの考えてもらえば良いと思います。
 https://gohugo.io/getting-started/quick-start/
 https://gohugo.io/hosting-and-deployment/hosting-on-github/
-GitHubアカウントの作成  Githubの公式サイトにアクセス ユーザー名・メールアドレス・パスワードを入力 Enforcement Challengesを認証する (画像を正しい向きにする) Join A FreePlanをクリック Conplete setupをクリック 上で入力したメールアドレスに送られてくるメールに記載されているVerify email addressをクリックする  リポジトリの作成  Githubの管理ページ(https://github.com/ユーザーID)にアクセス Newをクリック Repository nameに好きな名前を入力 (ここではblogと入力したとする) Create repositoryをクリック  </description>
+GitHubアカウントの作成  Githubの公式サイトにアクセス ユーザー名・メールアドレス・パスワードを入力 Enforcement Challengesを認証する (画像を正しい向きにする) Join A FreePlanをクリック Conplete setupをクリック 上で入力したメールアドレスに送られてくるメールに記載されているVerify email addressをクリックする  リポジトリの作成  Githubの管理ページ(https://github.com/ユーザーID)にアクセス Newをクリック Repository nameに好きな名前を入力 (ここではblogと入力したとする) Create repositoryをクリック  Gitをインストール(Windows)  GitforWindowsの公式サイトにアクセス Downloadをクリック Git-X.XX.X-XX-bit.exeを起動 すべて次へをクリック  </description>
     </item>
     
     <item>
