@@ -20,10 +20,9 @@
       <description>Github Pages x Hugo の運用方法 Github PagesやHugoの要所要所の使い方は多く存在するのですが、
 Gitのインストールから実際にHugoを使ってブログとして使うまで
 書いているところは少ないので運用方法として書きました。
-Hugoが関わっている部分はこちらを参考にしました。
+Hugoに関しては以下の記事を日本語訳したものを1記事にまとめたもとの考えてもらえば良いと思います。
 https://gohugo.io/getting-started/quick-start/
-https://gohugo.io/hosting-and-deployment/hosting-on-github/
-こちらを日本語訳したものを1記事にまとめたもとの考えてもらえば良いと思います。</description>
+https://gohugo.io/hosting-and-deployment/hosting-on-github/</description>
     </item>
     
     <item>
