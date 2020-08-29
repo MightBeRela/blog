@@ -6,17 +6,26 @@
     <description>Recent content on 1/10Aim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 20 Aug 2020 14:04:45 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2020 20:01:39 +0900</lastBuildDate>
     
 	<atom:link href="https://mightberela.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>最強のテキストエディタ - Brackets}</title>
+      <link>https://mightberela.github.io/blog/posts/14642/</link>
+      <pubDate>Sat, 29 Aug 2020 20:01:39 +0900</pubDate>
+      
+      <guid>https://mightberela.github.io/blog/posts/14642/</guid>
+      <description>Bracketsとは？ Adobeが開発するテキストエディタ。 見た目がスッキリしている。 拡張機能もインストールできる。 使ってみたらわかる。 本当におすすめ。 以上クソ記事。</description>
+    </item>
+    
+    <item>
       <title>Github Pages x Hugo の運用方法</title>
-      <link>https://mightberela.github.io/blog/posts/github-pages-x-hugo-%E3%81%AE%E9%81%8B%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <link>https://mightberela.github.io/blog/posts/65436/</link>
       <pubDate>Thu, 20 Aug 2020 14:04:45 +0900</pubDate>
       
-      <guid>https://mightberela.github.io/blog/posts/github-pages-x-hugo-%E3%81%AE%E9%81%8B%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://mightberela.github.io/blog/posts/65436/</guid>
       <description>Github Pages x Hugo の運用方法 Github PagesやHugoの要所要所の使い方は多く存在するのですが、
 Gitのインストールから実際にHugoを使ってブログとして使うまで
 書いているところは少ないので運用方法として書くことにしました。

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://mightberela.github.io/blog/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://mightberela.github.io/blog/css/github.css" />
+    
+    <link crossorigin="anonymous" media="(prefers-color-scheme: dark)" rel="stylesheet"
+        href="https://mightberela.github.io/blog/css/dark.css" />
+    
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"
+        content="Github Pages x Hugo の運用方法 Github PagesやHugoの要所要所の使い方は多く存在するのですが、
+Gitのインストールから実際にHugoを使ってブログとして使うまで
+書いているところは少ないので運用方法として書くことにしました。
+Hugoに関しては以下の記事を日本語訳したものを1つの記事にまとめたもとの考えてもらえば良いと思います。
+https://gohugo.io/getting-started/quick-start/
+https://gohugo.io/hosting-and-deployment/hosting-on-github/
+GitHubアカウントの作成  Githubの公式サイトにアクセス ユーザー名・メールアドレス・パスワードを入力 Enforcement Challengesを認証する (画像を正しい向きにする) Join A FreePlanをクリック Conplete setupをクリック 上で入力したメールアドレスに送られてくるメールに記載されているVerify email addressをクリックする  リポジトリの作成  Githubの管理ページ(https://github.com/ユーザーID)にアクセス Newをクリック Repository nameに好きな名前を入力 Create repositoryをクリック  Gitをインストール(Windows)  Git for Windowsの公式サイトにアクセス Downloadをクリック Git-X.XX.X-XX-bit.exeを起動 すべてNextをクリック  Gitを設定する  コマンドプロンプトを開く git config --global user.name ユーザーIDを実行 git config --global user.email メールアドレスを実行   Hugoをインストール(Windows)  Hugoの公式リポジトリにアクセス hugo_X.XX.X_Windows-XXbit.zipをダウンロード 好きな場所に解凍  環境変数にHugoを追加する  コントロールパネルを開く システムとセキュリティを開く システムを開く システムの詳細設定を開く 環境変数を開く システム環境変数のPathを開く 新規をクリック 解凍先のパスを入力 OKをクリック  Hugoで新しいサイトを作る サイトの基礎を作る  コマンドプロンプトを開く 解答した場所に作業ディレクトリを移す hugo new site サイト名を実行  テーマをインストールする  git initを実行 git submodule add テーマのGithubリポジトリURL themes/テーマ名 config." />
+    <meta name="keywords"
+        content="" />
+    <meta name="robots" content="noodp" />
+    <link rel="canonical" href="https://mightberela.github.io/blog/posts/65436/" />
+
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Github Pages x Hugo の運用方法 - 1/10Aim" />
+    <meta name="twitter:description"
+        content="Github Pages x Hugo の運用方法 Github PagesやHugoの要所要所の使い方は多く存在するのですが、
+Gitのインストールから実際にHugoを使ってブログとして使うまで
+書いているところは少ないので運用方法として書くことにしました。
+Hugoに関しては以下の記事を日本語訳したものを1つの記事にまとめたもとの考えてもらえば良いと思います。
+https://gohugo.io/getting-started/quick-start/
+https://gohugo.io/hosting-and-deployment/hosting-on-github/
+GitHubアカウントの作成  Githubの公式サイトにアクセス ユーザー名・メールアドレス・パスワードを入力 Enforcement Challengesを認証する (画像を正しい向きにする) Join A FreePlanをクリック Conplete setupをクリック 上で入力したメールアドレスに送られてくるメールに記載されているVerify email addressをクリックする  リポジトリの作成  Githubの管理ページ(https://github.com/ユーザーID)にアクセス Newをクリック Repository nameに好きな名前を入力 Create repositoryをクリック  Gitをインストール(Windows)  Git for Windowsの公式サイトにアクセス Downloadをクリック Git-X.XX.X-XX-bit.exeを起動 すべてNextをクリック  Gitを設定する  コマンドプロンプトを開く git config --global user.name ユーザーIDを実行 git config --global user.email メールアドレスを実行   Hugoをインストール(Windows)  Hugoの公式リポジトリにアクセス hugo_X.XX.X_Windows-XXbit.zipをダウンロード 好きな場所に解凍  環境変数にHugoを追加する  コントロールパネルを開く システムとセキュリティを開く システムを開く システムの詳細設定を開く 環境変数を開く システム環境変数のPathを開く 新規をクリック 解凍先のパスを入力 OKをクリック  Hugoで新しいサイトを作る サイトの基礎を作る  コマンドプロンプトを開く 解答した場所に作業ディレクトリを移す hugo new site サイト名を実行  テーマをインストールする  git initを実行 git submodule add テーマのGithubリポジトリURL themes/テーマ名 config." />
+    <meta name="twitter:site" content="https://mightberela.github.io/blog/" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image"
+        content="https://mightberela.github.io/blog/">
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Github Pages x Hugo の運用方法 - 1/10Aim">
+    <meta property="og:description"
+        content="Github Pages x Hugo の運用方法 Github PagesやHugoの要所要所の使い方は多く存在するのですが、
+Gitのインストールから実際にHugoを使ってブログとして使うまで
+書いているところは少ないので運用方法として書くことにしました。
+Hugoに関しては以下の記事を日本語訳したものを1つの記事にまとめたもとの考えてもらえば良いと思います。
+https://gohugo.io/getting-started/quick-start/
+https://gohugo.io/hosting-and-deployment/hosting-on-github/
+GitHubアカウントの作成  Githubの公式サイトにアクセス ユーザー名・メールアドレス・パスワードを入力 Enforcement Challengesを認証する (画像を正しい向きにする) Join A FreePlanをクリック Conplete setupをクリック 上で入力したメールアドレスに送られてくるメールに記載されているVerify email addressをクリックする  リポジトリの作成  Githubの管理ページ(https://github.com/ユーザーID)にアクセス Newをクリック Repository nameに好きな名前を入力 Create repositoryをクリック  Gitをインストール(Windows)  Git for Windowsの公式サイトにアクセス Downloadをクリック Git-X.XX.X-XX-bit.exeを起動 すべてNextをクリック  Gitを設定する  コマンドプロンプトを開く git config --global user.name ユーザーIDを実行 git config --global user.email メールアドレスを実行   Hugoをインストール(Windows)  Hugoの公式リポジトリにアクセス hugo_X.XX.X_Windows-XXbit.zipをダウンロード 好きな場所に解凍  環境変数にHugoを追加する  コントロールパネルを開く システムとセキュリティを開く システムを開く システムの詳細設定を開く 環境変数を開く システム環境変数のPathを開く 新規をクリック 解凍先のパスを入力 OKをクリック  Hugoで新しいサイトを作る サイトの基礎を作る  コマンドプロンプトを開く 解答した場所に作業ディレクトリを移す hugo new site サイト名を実行  テーマをインストールする  git initを実行 git submodule add テーマのGithubリポジトリURL themes/テーマ名 config." />
+    <meta property="og:url" content="https://mightberela.github.io/blog/posts/65436/" />
+    <meta property="og:site_name" content="Github Pages x Hugo の運用方法" />
+    <meta property="og:image"
+        content="https://mightberela.github.io/blog/">
+    <meta property="og:image:width" content="2048">
+    <meta property="og:image:height" content="1024">
+    
+    <meta property="article:published_time" content="2020-08-20 14:04:45 &#43;0900 JST" />
+    
+
+    
+    
+
+    
+    
+
+    <title>Github Pages x Hugo の運用方法 - 1/10Aim</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mightberela.github.io/blog/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+
+    
+    
+
+    
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header py-lg-0 js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mightberela.github.io/blog/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <nav class="d-flex" aria-label="Global">
+            <a class="js-selected-navigation-item Header-link py-lg-3">&nbsp;</a>
+        </nav>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mightberela.github.io/blog/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mightberela.github.io/blog/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main>
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mightberela.github.io/blog/about/">
+                                
+                                <img src="https://mightberela.github.io/blog/images/avatar.png" width="26" height="26">
+                                
+                            </a>
+                            <span class="author"><a href="https://mightberela.github.io/blog/">1/10Aim</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mightberela.github.io/blog/posts/65436/">Github Pages x Hugo の運用方法</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-08-20" class="no-wrap"
+                                    title="Created at 2020/08/20">
+                                    2020-08-20</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modified <time-ago datetime="2020-08-20" class="no-wrap"
+                                    title="Modified  at 2020/08/20">
+                                    2020-08-20</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                1551 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="github-pages-x-hugo-の運用方法">Github Pages x Hugo の運用方法</h1>
+<p>Github PagesやHugoの要所要所の使い方は多く存在するのですが、<br>
+Gitのインストールから実際にHugoを使ってブログとして使うまで<br>
+書いているところは少ないので<strong>運用方法</strong>として書くことにしました。</p>
+<p>Hugoに関しては以下の記事を日本語訳したものを1つの記事にまとめたもとの考えてもらえば良いと思います。<br>
+<a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a><br>
+<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+<h2 id="githubアカウントの作成">GitHubアカウントの作成</h2>
+<ol>
+<li><a href="https://github.com/">Githubの公式サイト</a>にアクセス</li>
+<li>ユーザー名・メールアドレス・パスワードを入力</li>
+<li>Enforcement Challengesを認証する (画像を正しい向きにする)</li>
+<li>Join A FreePlanをクリック</li>
+<li>Conplete setupをクリック</li>
+<li>上で入力したメールアドレスに送られてくるメールに記載されているVerify email addressをクリックする</li>
+</ol>
+<h2 id="リポジトリの作成">リポジトリの作成</h2>
+<ol>
+<li>Githubの管理ページ(<a href="https://github.com/">https://github.com/</a>ユーザーID)にアクセス</li>
+<li>Newをクリック</li>
+<li>Repository nameに好きな名前を入力</li>
+<li>Create repositoryをクリック</li>
+</ol>
+<h2 id="gitをインストールwindows">Gitをインストール(Windows)</h2>
+<ol>
+<li><a href="https://gitforwindows.org/">Git for Windowsの公式サイト</a>にアクセス</li>
+<li>Downloadをクリック</li>
+<li>Git-X.XX.X-XX-bit.exeを起動</li>
+<li>すべてNextをクリック</li>
+</ol>
+<h2 id="gitを設定する">Gitを設定する</h2>
+<ol>
+<li>コマンドプロンプトを開く</li>
+<li><code>git config --global user.name ユーザーID</code>を実行</li>
+<li><code>git config --global user.email メールアドレス</code>を実行  　　</li>
+</ol>
+<h2 id="hugoをインストールwindows">Hugoをインストール(Windows)</h2>
+<ol>
+<li><a href="https://github.com/gohugoio/hugo/releases">Hugoの公式リポジトリ</a>にアクセス</li>
+<li>hugo_X.XX.X_Windows-XXbit.zipをダウンロード</li>
+<li>好きな場所に解凍</li>
+</ol>
+<h2 id="環境変数にhugoを追加する">環境変数にHugoを追加する</h2>
+<ol>
+<li>コントロールパネルを開く</li>
+<li>システムとセキュリティを開く</li>
+<li>システムを開く</li>
+<li>システムの詳細設定を開く</li>
+<li>環境変数を開く</li>
+<li>システム環境変数のPathを開く</li>
+<li>新規をクリック</li>
+<li>解凍先のパスを入力</li>
+<li>OKをクリック</li>
+</ol>
+<h2 id="hugoで新しいサイトを作る">Hugoで新しいサイトを作る</h2>
+<h3 id="サイトの基礎を作る">サイトの基礎を作る</h3>
+<ol>
+<li>コマンドプロンプトを開く</li>
+<li>解答した場所に作業ディレクトリを移す</li>
+<li><code>hugo new site サイト名</code>を実行</li>
+</ol>
+<h3 id="テーマをインストールする">テーマをインストールする</h3>
+<ol>
+<li><code>git init</code>を実行</li>
+<li><code>git submodule add テーマのGithubリポジトリURL themes/テーマ名</code></li>
+<li>config.tomlに<code>theme = &quot;テーマ名&quot;</code>を書き込む</li>
+</ol>
+<h3 id="テーマが正常に動作しているかどうかを確かめる">テーマが正常に動作しているかどうかを確かめる</h3>
+<ol>
+<li><code>hugo start -D</code>を実行</li>
+<li>http://localhost:1313/にアクセス</li>
+</ol>
+<h3 id="github上で動作することを想定してconfigを変更する">Github上で動作することを想定してconfigを変更する</h3>
+<ol>
+<li>config.tomlのbaseURLを<code> https://ユーザーID.github.io/リポジトリ名/</code> に変更する</li>
+</ol>
+<h3 id="ビルド">ビルド</h3>
+<ol>
+<li><code>hugo -D</code>を実行</li>
+</ol>
+<h2 id="githubにアップロードする初回">Githubにアップロードする(初回)</h2>
+<ol>
+<li><code>cd public</code>を実行</li>
+<li><code>git init</code>を実行</li>
+<li><code>git add .</code>を実行</li>
+<li><code>git commit -m コメント</code>を実行</li>
+<li><code>git remote add origin https://github.com/ユーザーID/リポジトリ名.git</code>を実行</li>
+<li><code>git push -u origin master</code>を実行</li>
+<li>別ウィンドウでユーザーIDとパスワードの入力を求められるので入力</li>
+</ol>
+<h2 id="github-pagesの公開設定する">Github Pagesの公開設定する</h2>
+<ol>
+<li>リポジトリにアクセス(<a href="https://github.com/">https://github.com/</a>ユーザーID/リポジトリ名)</li>
+<li>Settingsを開く</li>
+<li>下にスクロールしてGithub Pagesの設定項目を見つける</li>
+<li>Sourceにmasterを選択</li>
+<li>セーブを押す</li>
+</ol>
+<h2 id="記事を作る">記事を作る</h2>
+<ol>
+<li><code>hugo new posts/Title.md</code>を実行<br>
+(ファイル名に日本語を指定すると文字化けするので英語で指定した後手動で日本語のファイル名を指定する必要がある。)</li>
+<li>マークダウンで書く (次回の記事はこれについて書くかも？)</li>
+</ol>
+<h2 id="githubにアップロードする二回目以降">Githubにアップロードする(二回目以降)</h2>
+<ol start="0">
+<li>publicの中身を削除 (これはどちらでも)</li>
+<li>コマンドプロンプトを開く</li>
+<li>解答した場所に作業ディレクトリを移す</li>
+<li><code>hugo -D</code>を実行</li>
+<li><code>cd public</code>を実行</li>
+<li><code>git add .</code>を実行</li>
+<li><code>git commit -m コメント</code>を実行</li>
+<li><code>git push -u origin master</code>を実行<br>
+(分かる人はこの一連の動作をbatファイルに書くと楽)</li>
+</ol>
+</article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0"></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="1/10Aim" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mightberela.github.io/blog/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mightberela.github.io/blog/js/frameworks.js"></script>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mightberela.github.io/blog/js/github-bootstrap.js"></script>
+<script src="https://mightberela.github.io/blog/js/stop.js"></script>
+<script src="https://mightberela.github.io/blog/js/contributions.js"></script>
+
+</body>
+
+</html>
